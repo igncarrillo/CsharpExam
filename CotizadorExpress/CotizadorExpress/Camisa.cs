@@ -36,6 +36,7 @@ namespace CotizadorExpress
 
             do
             {
+                Console.WriteLine();
                 try
                 {
                     Console.Write("Ingrese el precio base de la camisa: ");
@@ -51,29 +52,32 @@ namespace CotizadorExpress
 
         public override double calcularPrecio()
         {
-            double variacion, variacion2, variacion3, variacion4 = 0;
+            double variacion, variacion2 = 0, variacion3 = 0, variacion4 = 0;
             variacion = base.calcularPrecio();
             if (esMangaCorta)
             {
                 if (cuelloMao)
                 {
-                    
+                    variacion2 = PrecioPrenda * 0.1;
+                    var temporal = PrecioPrenda - variacion2;
+                    variacion3 = temporal * 0.03;
+
                 }
                 else
                 {
-                    //solo manga corta
+                    variacion2=PrecioPrenda*0.1;
                 }
             }
             else
             {
                 if (cuelloMao)
                 {
-                    //solo cuello
+                    variacion4 = PrecioPrenda * 0.03;
                 }
             }
 
 
-            return (PrecioPrenda+variacion-variacion2);
+            return (PrecioPrenda+variacion-variacion2+variacion3+variacion4);
         }
 
         private void MenuManga()

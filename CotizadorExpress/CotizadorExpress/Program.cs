@@ -53,15 +53,31 @@ namespace CotizadorExpress
                             vendedor.RealizarCotizacion();
                             break;
                         case '2':
-                            vendedor.HistorialVendedor.Peek().Imprimir();
-                            break;
-                        case '3':
-                            foreach (var cotizacion in vendedor.HistorialVendedor)
+                            try
                             {
-                                cotizacion.Imprimir();
+                                vendedor.HistorialVendedor.Peek().Imprimir();
+                                break;
+                            }
+                            catch (System.InvalidOperationException e)
+                            {
+                                Console.WriteLine("No existen cotizaciones disponibles");
+                                break;
                             }
 
+                        case '3':
+                            if (vendedor.HistorialVendedor.Count == 0)
+                            {
+                                Console.WriteLine("No existen cotizaciones disponibles");
+                            }
+                            else
+                            {
+                                foreach (var cotizacion in vendedor.HistorialVendedor)
+                                {
+                                    cotizacion.Imprimir();
+                                }
+                            }
                             break;
+
                         case 'Q':
                             exit = true;
                             break;

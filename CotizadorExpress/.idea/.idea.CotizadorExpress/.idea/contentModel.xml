@@ -9,6 +9,7 @@
         <e p="Camisa.cs" t="Include" />
         <e p="Cotizacion.cs" t="Include" />
         <e p="CotizadorExpress.csproj" t="IncludeRecursive" />
+        <e p="iImprimible.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
         <e p="Pantalon.cs" t="Include" />
         <e p="Prenda.cs" t="Include" />

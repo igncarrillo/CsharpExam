@@ -6,8 +6,8 @@ namespace CotizadorExpress
     public class Prenda
     {
         protected string CalidadPrenda { get;}
-        protected double PrecioPrenda { get; set; }
-        protected int CantidadEnStock { get; set; }
+        public double PrecioPrenda { get; protected set; }
+        public int CantidadEnStock { get; protected set; }
 
         public virtual double calcularPrecio()
         {

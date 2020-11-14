@@ -40,6 +40,7 @@
     <ItemGroup>
         <Compile Include="Camisa.cs" />
         <Compile Include="Cotizacion.cs" />
+        <Compile Include="Iimprimible.cs" />
         <Compile Include="Pantalon.cs" />
         <Compile Include="Prenda.cs" />
         <Compile Include="Program.cs" />

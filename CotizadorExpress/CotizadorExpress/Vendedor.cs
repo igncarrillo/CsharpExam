@@ -24,7 +24,19 @@ namespace CotizadorExpress
 
         public void RealizarCotizacion()
         {
-            HistorialVendedor.Push(new Cotizacion(this));
+            Cotizacion cotizacion = new Cotizacion(this);
+            if (cotizacion.CantidadUnidades > cotizacion.PrendaCotizada.CantidadEnStock)
+            {
+                {
+                    Console.WriteLine("El stock es insuficiente para la cantidad seleccionada");
+                }
+            }
+            else
+            {
+                HistorialVendedor.Push(cotizacion);
+                cotizacion.RealizarCalculo();
+            }
+
         }
     }
     

@@ -17,6 +17,7 @@ namespace CotizadorExpress
             {
                 CantidadEnStock = 500;
             }
+            Console.WriteLine();
             do
             {
                 try
