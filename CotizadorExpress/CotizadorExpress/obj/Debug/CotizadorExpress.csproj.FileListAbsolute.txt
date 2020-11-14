@@ -1,0 +1,6 @@
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\bin\Debug\CotizadorExpress.exe
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\bin\Debug\CotizadorExpress.pdb
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\obj\Debug\CotizadorExpress.csprojAssemblyReference.cache
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\obj\Debug\CotizadorExpress.csproj.CoreCompileInputs.cache
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\obj\Debug\CotizadorExpress.exe
+D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress\CotizadorExpress\obj\Debug\CotizadorExpress.pdb

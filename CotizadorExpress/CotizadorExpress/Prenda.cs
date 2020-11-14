@@ -1,23 +1,61 @@
-﻿namespace CotizadorExpress
+﻿using System;
+using System.Dynamic;
+
+namespace CotizadorExpress
 {
     public class Prenda
     {
-        protected enum calidadPrenda { Standard , Premium }
-        protected int precioPrenda;
-        protected int cantidadEnStock;
+        protected string CalidadPrenda { get;}
+        protected double PrecioPrenda { get; set; }
+        protected int CantidadEnStock { get; set; }
 
-    }
+        public virtual double calcularPrecio()
+        {
+            double variacionPrecio = 0;
+            if (CalidadPrenda == "Premium")
+            {
+                variacionPrecio = PrecioPrenda * 0.3;
+            }
 
-    public class Pantalon : Prenda
-    {
-        private bool esChupin; //F es comun
+            return variacionPrecio;
+        }
+        
+        public Prenda()
+        {
+            char entrada = '0';
 
-    }
-
-    public class Camisas : Prenda
-    {
-        private bool esMangaCorta; //F es manga larga
-        private bool cuelloMao;
-
+            var exit = false;
+            do
+            {
+                Console.Write(@"
+                Elija el tipo de prenda:
+                1- Standar
+                2- Premium
+                Respuesta: ");
+                try
+                {
+                    entrada = char.Parse(Console.ReadLine());
+                    switch (entrada)
+                    {
+                        case '1':
+                            CalidadPrenda = "Standar";
+                            exit = true;
+                            break;
+                        case '2':
+                            CalidadPrenda = "Premium";
+                            exit = true;
+                            break;
+                        default:
+                            Console.WriteLine("La orden no existe, intente nuevamente");
+                            break;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message + "Intente nuevamente");
+                }
+            } while (!exit);
+        }
+            
     }
 }

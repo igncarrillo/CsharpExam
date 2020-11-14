@@ -6,9 +6,11 @@
     <e p="D:\Drive\codigo\RiderProjects\Examen\CotizadorExpress" t="IncludeFlat">
       <e p="CotizadorExpress" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Camisa.cs" t="Include" />
         <e p="Cotizacion.cs" t="Include" />
         <e p="CotizadorExpress.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="Pantalon.cs" t="Include" />
         <e p="Prenda.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
